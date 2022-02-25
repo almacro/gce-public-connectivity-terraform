@@ -13,6 +13,12 @@ limitations under the License.
 
 #<!--* freshness: { owner: 'ttaggart@google.com' reviewed: '2019-10-01' } *-->
 
+terraform {
+  required_providers {
+    google      = "4.0.0"
+    google-beta = "4.0.0"
+  }
+}
 provider "google" {
   version     = "2.5.1"
   project     = "${var.vpc_pid}"
