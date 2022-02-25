@@ -16,7 +16,7 @@ limitations under the License.
 resource "google_compute_firewall" "http" {
   name          = "allow-lb-and-healthcheck"
   network       = "default"
-  project       = "${google_project.iap_connect_vpc.project_id}"
+  project       = google_project.iap_connect_vpc.project_id
   target_tags   = ["http-tag"]
 
   source_ranges = [
@@ -33,7 +33,7 @@ resource "google_compute_firewall" "http" {
 resource "google_compute_firewall" "allow-ssh-from-iap" {
   name          = "allow-ssh-from-iap"
   network       = "default"
-  project       = "${google_project.iap_connect_vpc.project_id}"
+  project       = google_project.iap_connect_vpc.project_id
   target_tags   = ["http-tag"]
 
   source_ranges = [
