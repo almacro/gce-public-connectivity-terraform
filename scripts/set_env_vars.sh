@@ -30,16 +30,16 @@ TF_VAR_org_id=$(gcloud organizations list \
 export TF_VAR_org_id
 
 
-TF_VAR_region1=us-west1
+TF_VAR_region1=us-central1
 export TF_VAR_region1
 
-TF_VAR_zone1=us-west1-b
+TF_VAR_zone1=us-central1-b
 export TF_VAR_zone1
 
-TF_VAR_region2=europe-west1
+TF_VAR_region2=us-west1
 export TF_VAR_region2
 
-TF_VAR_zone2=europe-west1-b
+TF_VAR_zone2=us-west1-b
 export TF_VAR_zone2
 
 TF_VAR_user_account=$(gcloud auth list \

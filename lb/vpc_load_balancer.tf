@@ -37,11 +37,11 @@ resource "google_compute_backend_service" "http-map-backend-service" {
   health_checks = ["${google_compute_health_check.http-basic-check.self_link}"]
 
   backend {
-    group = "${google_compute_instance_group.us-resources-w.self_link}"
+    group = "${google_compute_instance_group.central-resources-w.self_link}"
   }
   
     backend {
-    group = "${google_compute_instance_group.europe-resources-w.self_link}"
+    group = "${google_compute_instance_group.west-resources-w.self_link}"
   }  
 }
 

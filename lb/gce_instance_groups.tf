@@ -14,8 +14,8 @@ limitations under the License.
 #<!--* freshness: { owner: 'ttaggart@google.com' reviewed: '2019-10-01' } *-->
 
 resource "google_compute_instance_group" "us-resources-w" {
-  name        = "us-resources-w"
-  zone        = "${var.zone1}"
+  name        = "central-resources-w"
+  zone        = var.zone1
 
   named_port {
     name = "http"
@@ -28,9 +28,9 @@ instances = [
   ]
 }
 
-resource "google_compute_instance_group" "europe-resources-w" {
-  name        = "europe-resources-w"
-  zone        = "${var.zone2}"
+resource "google_compute_instance_group" "west-resources-w" {
+  name        = "west-resources-w"
+  zone        = var.zone2
 
   named_port {
     name = "http"
