@@ -15,12 +15,12 @@ limitations under the License.
 
 terraform {
   required_providers {
-    google      = ">= 4.0.0"
-    google-beta = ">= 4.0.0"
+    google      = "4.0.0"
+    google-beta = "4.0.0"
   }
 }
 provider "google" {
-  version     = "2.5.1"
+  version     = "4.0.0"
   project     = "${var.vpc_pid}"
 }
 
