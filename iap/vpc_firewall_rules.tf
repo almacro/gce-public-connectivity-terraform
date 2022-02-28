@@ -49,6 +49,6 @@ resource "google_compute_firewall" "allow-ssh-from-iap" {
     # The project's services must be set up before the
     # network is enabled as the compute API will not
     # be enabled and cause the setup to fail.
-    "google_project_services.iap_connect_vpc",
+    google_project_services.iap_connect_vpc,
   ]
 }
